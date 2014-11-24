@@ -72,9 +72,8 @@ module Enom
     # list, so this will raise a NotImplementedError until Enom fixes this
     def self.check_multiple_tlds(sld, tlds = "*")
       if tlds.kind_of?(Array)
-        # list = tlds.join(",")
-        # tld  = nil
-        raise NotImplementedError
+        list = tlds.join(",")
+        tld  = nil        
       elsif %w(* *1 *2 @).include?(tlds)
         list = nil
         tld  = tlds
